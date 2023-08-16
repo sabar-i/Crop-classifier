@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#result-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#result {
+    font-weight: bold;
+}
+
+#label {
+    font-weight: bold;
+}
+
+/* Container to hold the uploaded image */
+#uploaded-image-container {
+    display: none;
+}
+
+/* Style the uploaded image */
+#uploaded-image {
+    width: 300px; /* Set the desired width */
+    height: 300px; /* Set the desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    /* Add a border for visual separation */
+    border: 1px solid #ccc;
+    /* Prevent default broken image icon from displaying */
+    display: block;
+}

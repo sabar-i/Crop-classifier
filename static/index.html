@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Classifier Web Tool</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <!-- Include Your Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text-center mt-5">
+            <h1>Crop Classifier</h1>
+            <form action="/api/predict" method="post" enctype="multipart/form-data" id="upload-form" class="my-4">
+                <div class="form-group">
+                    <input type="file" name="file" id="file-input" class="form-control-file" accept="image/*">
+                </div>
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </form>
+        </div>
+
+        <!-- Include a Welcome Illustration -->
+        <div id="welcome-image-container" class="text-center mt-4">
+            <img src="/static/images/upload_illustration.png" alt="Welcome Illustration" class="img-fluid">
+        </div>
+
+        <!-- The uploaded image container will be created dynamically after uploading an image -->
+        <div id="uploaded-image-container" class="d-flex justify-content-center mt-4" style="display: none;">
+            <img id="uploaded-image" src="" alt="o" class="img-fluid" style="display: none;">
+        </div>
+        <div id="result-container" class="text-center" style="display: none;">
+            <p id="result" class="font-weight-bold"></p>
+            <p id="label" class="font-weight-bold"></p>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Include Your Custom JS -->
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
